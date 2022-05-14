@@ -1,0 +1,45 @@
+﻿<Page x:Class="UP_Exercise_1.Cone"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UP_Exercise_1"
+      mc:Ignorable="d" 
+      d:DesignHeight="520" d:DesignWidth="600"
+      Title="Конус" 
+      Height="520" Width="600"
+      WindowHeight="520" WindowWidth="600">
+
+    <Grid>
+        <Image Source="cone_img.jpg" Margin="50,50,330,271" />
+        <Image Source="cone_formulas.jpg" Margin="50,336,330,100" />
+        
+        <Button x:Name="cone_calc" Content="Вычислить" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" Click="Cone_calc_Click" Width="200" Height="45" Margin="325,175,75,300" />
+        <Button x:Name="cone_back" Content="Назад" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" Click="Cone_Back" Height="45" Margin="425,450,25,25" />
+
+        <Label Content="R = " FontFamily="Times New Roman" FontSize ="18" Foreground="Black" Background="White" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"
+               VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="60" Margin="315,25,0,0" />
+        <Label Content="H = " FontFamily="Times New Roman" FontSize ="18" Foreground="Black" Background="White" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"
+               VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="60" Margin="315,75,0,0" RenderTransformOrigin="0.583,-0.133" />
+        <Label Content="Точ. = " FontFamily="Times New Roman" FontSize ="18" Foreground="Black" Background="White" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"
+               VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="60" Margin="315,125,0,0" />
+
+        <Label Content="S осн. = " FontFamily="Times New Roman" FontSize ="18" Foreground="Black" Background="White" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"
+               VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="75" Margin="300,245,0,0" />
+        <Label Content="S бок. = " FontFamily="Times New Roman" FontSize ="18" Foreground="Black" Background="White" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"
+               VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="75" Margin="300,295,0,0" />
+        <Label Content="S общ. = " FontFamily="Times New Roman" FontSize ="18" Foreground="Black" Background="White" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"
+               VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="75" Margin="300,345,0,0" />
+        <Label Content="V = " FontFamily="Times New Roman" FontSize ="18" Foreground="Black" Background="White" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"
+               VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="75" Margin="300,395,0,0" />
+
+        <TextBox Name="cone_radius" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" Height="30" Width="150" Margin="375,25,75,465" ToolTip ="Введите радиус основания"/>
+        <TextBox Name="cone_height" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" Height="30" Width="150" Margin="375,75,75,415" ToolTip ="Введите высоту"/>
+        <TextBox Name="cone_accuracy" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" Height="30" Width="150" Margin="375,125,75,365" ToolTip ="Введите количество знаков после запятой"/>
+
+        <TextBox Name="cone_square_foundation" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" IsReadOnly ="True" Height="30" Width="150" Margin="375,245,75,245"/>
+        <TextBox Name="cone_square_side" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" IsReadOnly ="True" Height="30" Width="150" Margin="375,295,75,195"/>
+        <TextBox Name="cone_square_total" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" IsReadOnly ="True" Height="30" Width="150" Margin="375,345,75,145"/>
+        <TextBox Name="cone_volume" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" IsReadOnly ="True" Height="30" Width="150" Margin="375,395,75,95"/>
+    </Grid>
+</Page>

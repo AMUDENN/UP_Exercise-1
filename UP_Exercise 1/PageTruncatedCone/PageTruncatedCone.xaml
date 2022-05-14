@@ -1,0 +1,48 @@
+﻿<Page x:Class="UP_Exercise_1.TruncatedCone"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UP_Exercise_1"
+      mc:Ignorable="d" 
+      d:DesignHeight="570" d:DesignWidth="600"
+      Title="Усечённый конус" 
+      Height="570" Width="600"
+      WindowHeight="570" WindowWidth="600">
+
+    <Grid>
+        <Image Source="truncatedcone_img.jpg" Margin="50,75,320,265" />
+        <Image Source="truncatedcone_formulas.jpg" Margin="50,353,320,105" />
+        
+        <Button x:Name="truncatedcone_calc" Content="Вычислить" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" Click="Truncatedcone_calc_Click" Width="200" Height="45" Margin="325,230,75,295" />
+        <Button x:Name="truncatedcone_back" Content="Назад" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" Click="Truncatedcone_Back" Height="45" Margin="425,500,25,25" />
+
+        <Label Content="r = " FontFamily="Times New Roman" FontSize ="18" Foreground="Black" Background="White" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"
+               VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="60" Margin="315,25,0,0" />
+        <Label Content="R = " FontFamily="Times New Roman" FontSize ="18" Foreground="Black" Background="White" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"
+               VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="60" Margin="315,75,0,0" />
+        <Label Content="H = " FontFamily="Times New Roman" FontSize ="18" Foreground="Black" Background="White" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"
+               VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="60" Margin="315,125,0,0" RenderTransformOrigin="0.583,-0.133" />
+        <Label Content="Точ. = " FontFamily="Times New Roman" FontSize ="18" Foreground="Black" Background="White" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"
+               VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="60" Margin="315,175,0,0" />
+
+        <Label Content="S верх. = " FontFamily="Times New Roman" FontSize ="18" Foreground="Black" Background="White" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"
+               VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="75" Margin="300,300,0,0" />
+        <Label Content="S ниж. = " FontFamily="Times New Roman" FontSize ="18" Foreground="Black" Background="White" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"
+               VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="75" Margin="300,350,0,0" />
+        <Label Content="S бок. = " FontFamily="Times New Roman" FontSize ="18" Foreground="Black" Background="White" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"
+               VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="75" Margin="300,400,0,0" />
+        <Label Content="V = " FontFamily="Times New Roman" FontSize ="18" Foreground="Black" Background="White" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"
+               VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="75" Margin="300,450,0,0" />
+
+        <TextBox Name="truncatedcone_radius_top" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" Height="30" Width="150" Margin="375,25,75,515" ToolTip ="Введите радиус верхнего основания"/>
+        <TextBox Name="truncatedcone_radius_bottom" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" Height="30" Width="150" Margin="375,75,75,465" ToolTip ="Введите радиус нижнего основания"/>
+        <TextBox Name="truncatedcone_height" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" Height="30" Width="150" Margin="375,125,75,415" ToolTip ="Введите высоту"/>
+        <TextBox Name="truncatedcone_accuracy" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" Height="30" Width="150" Margin="375,175,75,365" ToolTip ="Введите количество знаков после запятой"/>
+
+        <TextBox Name="truncatedcone_square_top" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" IsReadOnly ="True" Height="30" Width="150" Margin="375,300,75,240"/>
+        <TextBox Name="truncatedcone_square_bottom" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" IsReadOnly ="True" Height="30" Width="150" Margin="375,350,75,190"/>
+        <TextBox Name="truncatedcone_square_side" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" IsReadOnly ="True" Height="30" Width="150" Margin="375,400,75,140"/>
+        <TextBox Name="truncatedcone_volume" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" IsReadOnly ="True" Height="30" Width="150" Margin="375,450,75,90"/>
+    </Grid>
+</Page>
