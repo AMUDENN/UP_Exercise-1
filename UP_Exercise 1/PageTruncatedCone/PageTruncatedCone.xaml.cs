@@ -43,9 +43,11 @@ namespace UP_Exercise_1
                     double l = Math.Round(Math.Sqrt(Math.Pow(radius_top - radius_bottom, 2) + Math.Pow(height, 2)), accuracy);
                     double square_first = Math.Round(Math.PI*Math.Pow(radius_top, 2), accuracy);
                     double square_second = Math.Round(Math.PI * Math.Pow(radius_bottom, 2), accuracy);
+                    double square_side = Math.Round(Math.PI * l * (radius_top + radius_bottom), accuracy);
                     truncatedcone_square_top.Text = Convert.ToString(square_first);
                     truncatedcone_square_bottom.Text = Convert.ToString(square_second);
-                    truncatedcone_square_side.Text = Convert.ToString(Math.Round(Math.PI * l * (radius_top + radius_bottom), accuracy));
+                    truncatedcone_square_side.Text = Convert.ToString(square_side);
+                    truncatedcone_square_total.Text = Convert.ToString(square_first + square_second + square_side);
                     truncatedcone_volume.Text = Convert.ToString(Math.Round(height * (square_first + square_second + Math.Sqrt(square_first * square_second)) / 3, accuracy));
                 }
                 catch { }
@@ -64,6 +66,7 @@ namespace UP_Exercise_1
                 truncatedcone_square_top.Text = "Введите корректные значения";
                 truncatedcone_square_bottom.Text = "Введите корректные значения";
                 truncatedcone_square_side.Text = "Введите корректные значения";
+                truncatedcone_square_total.Text = "Введите корректные значения";
                 truncatedcone_volume.Text = "Введите корректные значения";
             }
         }
