@@ -23,15 +23,15 @@ namespace UP_Exercise_1
             InitializeComponent();
             MainFrame.Content = new Menu();
         }
-        static public void Change_Title(string title)
+        public static void Change_Title(string title)
         {
             Application.Current.MainWindow.Title = title;
         }
-        static public void Main_Menu_Back(Page ths)
+        public static void Main_Menu_Back(Page ths)
         {
             ths.NavigationService.Navigate(new Menu());
         }
-        static public void Main_Exit_Click()
+        public static void Main_Exit_Click()
         {
             Application.Current.MainWindow.Close();
         }
