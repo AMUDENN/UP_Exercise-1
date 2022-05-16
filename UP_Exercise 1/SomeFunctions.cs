@@ -10,11 +10,10 @@ namespace UP_Exercise_1
     {
         static public Exception Ex_Double(string input_str, string data, double min = -1.7976931348623158e+308, double max = 1.7976931348623158e+308)
         {
-            double result = 0;
             try
             {
-                result = Convert.ToDouble(input_str);
-                if(result < min)
+                double result = Convert.ToDouble(input_str);
+                if (result < min)
                 {
                     throw new Exception($"Введено число {data} меньше минимального предела: {min}");
                 }
@@ -32,10 +31,9 @@ namespace UP_Exercise_1
 
         static public Exception Ex_Int(string input_str, string data, int min = -2147483648, int max = 2147483647)
         {
-            double result = 0;
             try
             {
-                result = Convert.ToInt32(input_str);
+                int result = Convert.ToInt32(input_str);
                 if (result < min)
                 {
                     throw new Exception($"Введено число {data} меньше минимального предела: {min}");
