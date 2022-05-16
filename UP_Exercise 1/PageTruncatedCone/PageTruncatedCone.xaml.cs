@@ -40,7 +40,7 @@ namespace UP_Exercise_1
                 int accuracy = Convert.ToInt32(truncatedcone_accuracy.Text);
                 try
                 {
-                    double l = Math.Round(Math.Sqrt(Math.Pow(radius_top - radius_bottom, 2) + Math.Pow(height, 2)), accuracy);
+                    double l = Math.Sqrt(Math.Pow(radius_top - radius_bottom, 2) + Math.Pow(height, 2));
                     double square_first = Math.Round(Math.PI*Math.Pow(radius_top, 2), accuracy);
                     double square_second = Math.Round(Math.PI * Math.Pow(radius_bottom, 2), accuracy);
                     truncatedcone_square_top.Text = Convert.ToString(square_first);
