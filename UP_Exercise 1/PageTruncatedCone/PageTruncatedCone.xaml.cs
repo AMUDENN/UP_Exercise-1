@@ -31,7 +31,7 @@ namespace UP_Exercise_1
             ex[3] = ExceptionFunctions.Ex_Int(truncatedcone_accuracy.Text, "\"Точность\"", 0, 15);
 
 
-            if (ex[0] == null && ex[1] == null && ex[2] == null)
+            if (ex[0] == null && ex[1] == null && ex[2] == null && ex[3] == null)
             {
 
                 double radius_top = Convert.ToDouble(truncatedcone_radius_top.Text);
