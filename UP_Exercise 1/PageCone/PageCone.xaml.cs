@@ -39,7 +39,7 @@ namespace UP_Exercise_1
                 try
                 {
                     double square_foundation = Math.Round(Math.PI * Math.Pow(radius, 2), accuracy);
-                    double square_side = (Math.Round(Math.PI * radius * Math.Sqrt(Math.Pow(radius, 2) + Math.Pow(height, 2)), accuracy));
+                    double square_side = Math.Round(Math.PI * radius * Math.Sqrt(Math.Pow(radius, 2) + Math.Pow(height, 2)), accuracy);
                     cone_square_foundation.Text = Convert.ToString(square_foundation);
                     cone_square_side.Text = Convert.ToString(square_side);
                     cone_square_total.Text = Convert.ToString(square_foundation + square_side);
