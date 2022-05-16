@@ -31,7 +31,7 @@ namespace UP_Exercise_1
             ex[3] = ExceptionFunctions.Ex_Int(truncatedcone_accuracy.Text, "\"Точность\"", 0, 15);
 
 
-            if (ex[0] == null && ex[1] == null && ex[2] == null)
+            if (ex[0] == null && ex[1] == null && ex[2] == null && ex[3] == null)
             {
 
                 double radius_top = Convert.ToDouble(truncatedcone_radius_top.Text);
@@ -40,8 +40,8 @@ namespace UP_Exercise_1
                 int accuracy = Convert.ToInt32(truncatedcone_accuracy.Text);
                 try
                 {
-                    double l = Math.Round(Math.Sqrt(Math.Pow(radius_top - radius_bottom, 2) + Math.Pow(height, 2)), accuracy);
-                    double square_first = Math.Round(Math.PI*Math.Pow(radius_top, 2), accuracy);
+                    double l = Math.Sqrt(Math.Pow(radius_top - radius_bottom, 2) + Math.Pow(height, 2));
+                    double square_first = Math.Round(Math.PI * Math.Pow(radius_top, 2), accuracy);
                     double square_second = Math.Round(Math.PI * Math.Pow(radius_bottom, 2), accuracy);
                     double square_side = Math.Round(Math.PI * l * (radius_top + radius_bottom), accuracy);
                     truncatedcone_square_top.Text = Convert.ToString(square_first);
