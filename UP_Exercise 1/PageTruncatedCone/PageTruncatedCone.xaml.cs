@@ -41,7 +41,7 @@ namespace UP_Exercise_1
                 try
                 {
                     double l = Math.Sqrt(Math.Pow(radius_top - radius_bottom, 2) + Math.Pow(height, 2));
-                    double square_first = Math.Round(Math.PI*Math.Pow(radius_top, 2), accuracy);
+                    double square_first = Math.Round(Math.PI * Math.Pow(radius_top, 2), accuracy);
                     double square_second = Math.Round(Math.PI * Math.Pow(radius_bottom, 2), accuracy);
                     truncatedcone_square_top.Text = Convert.ToString(square_first);
                     truncatedcone_square_bottom.Text = Convert.ToString(square_second);
