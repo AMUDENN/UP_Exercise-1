@@ -6,31 +6,27 @@
       xmlns:local="clr-namespace:UP_Exercise_1"
       mc:Ignorable="d" 
       d:DesignHeight="470" d:DesignWidth="600"
-      Title="Сфера" 
+      Title="Сфера" Style="{DynamicResource PageStyle}"
       Height="470" Width="600"
       WindowHeight="470" WindowWidth="600">
 
     <Grid>
-        <Image Source="sphere_img.jpg" Margin="50,43,350,217" />
-        <Image Source="sphere_formulas.jpg" Margin="50,284,350,50" />
+        <Image Source="sphere_img.png" Margin="50,50,330,200" />
+
+        <Button x:Name="sphere_calc" Style="{DynamicResource ButtonStyle}" Content="Вычислить" Click="Sphere_calc_Click" Width="200" Height="45" Margin="325,125,75,300" />
+        <Button x:Name="sphere_back" Style="{DynamicResource ButtonStyle}" Content="Назад" Click="Sphere_Back" Height="45" Margin="425,400,25,25" />
+
+        <Label Content="R = " Style="{DynamicResource LabelStyle}" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="60" Margin="315,50,0,0" />
+
+        <Label Content="V = " Style="{DynamicResource LabelStyle}" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="60" Margin="315,245,0,0" />
+        <Label Content="S = " Style="{DynamicResource LabelStyle}" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="60" Margin="315,295,0,0" />
+
+        <Label Content="S = 4πR^2" Style="{DynamicResource LabelStyle}" FontSize="24" HorizontalContentAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="150" Margin="85,295,0,0" />
+        <Label Content="V = 4/3πR^3" Style="{DynamicResource LabelStyle}" FontSize="24" HorizontalContentAlignment="Left"  VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="150" Margin="85,350,0,0" />
         
-        <Button x:Name="sphere_calc" Content="Вычислить" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" Click="Sphere_calc_Click" Width="200" Height="45" Margin="325,150,75,275" />
-        <Button x:Name="sphere_back" Content="Назад" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" Click="Sphere_Back" Height="45" Margin="425,400,25,25" />
+        <TextBox Name="sphere_radius" Style="{DynamicResource TextBoxStyle}" Height="30" Width="150" Margin="375,50,75,390" ToolTip ="Введите радиус"/>
 
-        <Label Content="R = " FontFamily="Times New Roman" FontSize ="18" Foreground="Black" Background="White" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"
-               VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="60" Margin="315,50,0,0" />
-        <Label Content="Точ. = " FontFamily="Times New Roman" FontSize ="18" Foreground="Black" Background="White" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"
-               VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="60" Margin="315,100,0,0" />
-
-        <Label Content="V = " FontFamily="Times New Roman" FontSize ="18" Foreground="Black" Background="White" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"
-               VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="60" Margin="315,245,0,0" />
-        <Label Content="S = " FontFamily="Times New Roman" FontSize ="18" Foreground="Black" Background="White" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"
-               VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="60" Margin="315,295,0,0" />
-
-        <TextBox Name="sphere_radius" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" Height="30" Width="150" Margin="375,50,75,390" ToolTip ="Введите радиус"/>
-        <TextBox Name="sphere_accuracy" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" Height="30" Width="150" Margin="375,100,75,340" ToolTip ="Введите количество знаков после запятой"/>
-
-        <TextBox Name="sphere_volume" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" IsReadOnly ="True" Height="30" Width="150" Margin="375,245,75,195"/>
-        <TextBox Name="sphere_square" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" IsReadOnly ="True" Height="30" Width="150" Margin="375,295,75,145"/>
+        <TextBox Name="sphere_volume" Style="{DynamicResource TextBoxStyle}" IsReadOnly ="True" Height="30" Width="150" Margin="375,245,75,195"/>
+        <TextBox Name="sphere_square" Style="{DynamicResource TextBoxStyle}" IsReadOnly ="True" Height="30" Width="150" Margin="375,295,75,145"/>
     </Grid>
 </Page>

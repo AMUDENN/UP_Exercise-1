@@ -17,10 +17,44 @@ namespace UP_Exercise_1
 { 
     public partial class Menu : Page
     {
+        public static int accuracy = 0;
         public Menu()
         {
             InitializeComponent();
             MainWindow.Change_Title("Меню");
+            Accuracy_Print();
+        }
+        private void Change_Light_Theme(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Change_Theme("Light");
+        }
+        private void Change_Dark_Theme(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Change_Theme("Dark");
+        }
+        private void Click_Accuracy(object sender, RoutedEventArgs e)
+        {
+            header_accuracy.IsSubmenuOpen = true;
+        }
+        private void Accuracy_Increment(object sender, RoutedEventArgs e)
+        {
+            if (accuracy < 15)
+            {
+                accuracy++;
+            }
+            Accuracy_Print();
+        }
+        private void Accuracy_Decrement(object sender, RoutedEventArgs e)
+        {
+            if (accuracy > 0)
+            {
+                accuracy--;
+            }
+            Accuracy_Print();
+        }
+        private void Accuracy_Print()
+        {
+            print_accuracy.Header = $"Точность: {accuracy}"; 
         }
         private void Sphere_Click(object sender, RoutedEventArgs e)
         {

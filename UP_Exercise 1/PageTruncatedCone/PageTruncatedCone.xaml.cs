@@ -24,20 +24,19 @@ namespace UP_Exercise_1
         }
         private void Truncatedcone_calc_Click(object sender, RoutedEventArgs e)
         {
-            Exception[] ex = new Exception[4];
+            Exception[] ex = new Exception[3];
             ex[0] = ExceptionFunctions.Ex_Double(truncatedcone_radius_top.Text, "\"r\"", 0);
             ex[1] = ExceptionFunctions.Ex_Double(truncatedcone_radius_bottom.Text, "\"R\"", 0);
             ex[2] = ExceptionFunctions.Ex_Double(truncatedcone_height.Text, "\"H\"", 0);
-            ex[3] = ExceptionFunctions.Ex_Int(truncatedcone_accuracy.Text, "\"Точность\"", 0, 15);
 
 
-            if (ex[0] == null && ex[1] == null && ex[2] == null && ex[3] == null)
+            if (ex[0] == null && ex[1] == null && ex[2] == null)
             {
 
                 double radius_top = Convert.ToDouble(truncatedcone_radius_top.Text);
                 double radius_bottom = Convert.ToDouble(truncatedcone_radius_bottom.Text);
                 double height = Convert.ToDouble(truncatedcone_height.Text);
-                int accuracy = Convert.ToInt32(truncatedcone_accuracy.Text);
+                int accuracy = Menu.accuracy;
                 try
                 {
                     double l = Math.Sqrt(Math.Pow(radius_top - radius_bottom, 2) + Math.Pow(height, 2));

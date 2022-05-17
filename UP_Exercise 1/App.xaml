@@ -4,6 +4,11 @@
              xmlns:local="clr-namespace:UP_Exercise_1"
              StartupUri="MainWindow/MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes\DarkTheme.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Themes\LightTheme.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

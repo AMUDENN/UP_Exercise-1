@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         ResizeMode="NoResize"
         Title="Main" Height="470" Width="600"
-        SizeToContent="WidthAndHeight">
+        SizeToContent="WidthAndHeight" Style="{DynamicResource WindowStyle}" >
     <Frame x:Name="MainFrame" Background="White" NavigationUIVisibility="Hidden"/>
 
 </Window>

@@ -25,16 +25,15 @@ namespace UP_Exercise_1
 
         private void Sphere_calc_Click(object sender, RoutedEventArgs e)
         {
-            Exception[] ex = new Exception[2];
+            Exception[] ex = new Exception[1];
             ex[0] = ExceptionFunctions.Ex_Double(sphere_radius.Text,"\"R\"", 0);
-            ex[1] = ExceptionFunctions.Ex_Int(sphere_accuracy.Text, "\"Точность\"", 0, 15);
 
 
-            if (ex[0] == null && ex[1] == null)
+            if (ex[0] == null)
             {
 
                 double radius = Convert.ToDouble(sphere_radius.Text);
-                int accuracy = Convert.ToInt32(sphere_accuracy.Text);
+                int accuracy = Menu.accuracy;
                 try
                 {
                     sphere_volume.Text = Convert.ToString(Math.Round(4 * Math.PI * Math.Pow(radius, 3) / 3, accuracy));

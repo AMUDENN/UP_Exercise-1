@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +22,20 @@ namespace UP_Exercise_1
             InitializeComponent();
             MainFrame.Content = new Menu();
         }
+        public static void Change_Theme(string theme) {
+            ResourceDictionary style = new ResourceDictionary();
+            if(theme == "Light")
+            {
+                style = Application.Current.Resources.MergedDictionaries[1];
+            }
+            else if (theme == "Dark")
+            {
+                style = Application.Current.Resources.MergedDictionaries[0];
+            }
+            Application.Current.Resources.Clear();
+            Application.Current.Resources.MergedDictionaries.Add(style);
+        }
+
         public static void Change_Title(string title)
         {
             Application.Current.MainWindow.Title = title;
@@ -35,7 +48,5 @@ namespace UP_Exercise_1
         {
             Application.Current.MainWindow.Close();
         }
-
-        
     }
 }

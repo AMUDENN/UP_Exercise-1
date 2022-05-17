@@ -6,40 +6,35 @@
       xmlns:local="clr-namespace:UP_Exercise_1"
       mc:Ignorable="d" 
       d:DesignHeight="520" d:DesignWidth="600"
-      Title="Цилиндр" 
+      Title="Цилиндр" Style="{DynamicResource PageStyle}"
       Height="520" Width="600"
       WindowHeight="520" WindowWidth="600">
 
     <Grid>
-        <Image Source="cylinder_img.jpg" Margin="80,50,370,220" />
-        <Image Source="cylinder_formulas.jpg" Margin="60,325,350,75" />
-        
-        <Button x:Name="cylinder_calc" Content="Вычислить" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" Click="Cylinder_calc_Click" Width="200" Height="45" Margin="325,175,75,300" />
-        <Button x:Name="cylinder_back" Content="Назад" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" Click="Cylinder_Back" Height="45" Margin="425,450,25,25" />
+        <Image Source="cylinder_img.png" Margin="50,50,350,220" />
 
-        <Label Content="R = " FontFamily="Times New Roman" FontSize ="18" Foreground="Black" Background="White" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"
-               VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="60" Margin="315,25,0,0" />
-        <Label Content="H = " FontFamily="Times New Roman" FontSize ="18" Foreground="Black" Background="White" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"
-               VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="60" Margin="315,75,0,0" RenderTransformOrigin="0.583,-0.133" />
-        <Label Content="Точ. = " FontFamily="Times New Roman" FontSize ="18" Foreground="Black" Background="White" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"
-               VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="60" Margin="315,125,0,0" />
+        <Button x:Name="cylinder_calc" Style="{DynamicResource ButtonStyle}" Content="Вычислить" Click="Cylinder_calc_Click" Width="200" Height="45" Margin="325,150,75,325" />
+        <Button x:Name="cylinder_back" Style="{DynamicResource ButtonStyle}" Content="Назад" Click="Cylinder_Back" Height="45" Margin="425,450,25,25" />
 
-        <Label Content="S осн. = " FontFamily="Times New Roman" FontSize ="18" Foreground="Black" Background="White" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"
-               VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="75" Margin="300,245,0,0" />
-        <Label Content="S бок. = " FontFamily="Times New Roman" FontSize ="18" Foreground="Black" Background="White" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"
-               VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="75" Margin="300,295,0,0" />
-        <Label Content="S общ. = " FontFamily="Times New Roman" FontSize ="18" Foreground="Black" Background="White" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"
-               VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="75" Margin="300,345,0,0" />
-        <Label Content="V = " FontFamily="Times New Roman" FontSize ="18" Foreground="Black" Background="White" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"
-               VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="75" Margin="300,395,0,0" />
+        <Label Content="R = " Style="{DynamicResource LabelStyle}" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="60" Margin="315,25,0,0" />
+        <Label Content="H = " Style="{DynamicResource LabelStyle}" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="60" Margin="315,75,0,0" RenderTransformOrigin="0.583,-0.133" />
 
-        <TextBox Name="cylinder_radius" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" Height="30" Width="150" Margin="375,25,75,465" ToolTip ="Введите радиус основания"/>
-        <TextBox Name="cylinder_height" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" Height="30" Width="150" Margin="375,75,75,415" ToolTip ="Введите высоту"/>
-        <TextBox Name="cylinder_accuracy" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" Height="30" Width="150" Margin="375,125,75,365" ToolTip ="Введите количество знаков после запятой"/>
+        <Label Content="S осн. = " Style="{DynamicResource LabelStyle}" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="75" Margin="300,245,0,0" />
+        <Label Content="S бок. = " Style="{DynamicResource LabelStyle}" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="75" Margin="300,295,0,0" />
+        <Label Content="S общ. = " Style="{DynamicResource LabelStyle}" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="75" Margin="300,345,0,0" />
+        <Label Content="V = " Style="{DynamicResource LabelStyle}" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="75" Margin="300,395,0,0" />
 
-        <TextBox Name="cylinder_square_foundation" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" IsReadOnly ="True" Height="30" Width="150" Margin="375,245,75,245"/>
-        <TextBox Name="cylinder_square_side" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" IsReadOnly ="True" Height="30" Width="150" Margin="375,295,75,195"/>
-        <TextBox Name="cylinder_square_total" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" IsReadOnly ="True" Height="30" Width="150" Margin="375,345,75,145"/>
-        <TextBox Name="cylinder_volume" FontFamily="Times New Roman" FontSize ="24" Foreground="Black" Background="White" IsReadOnly ="True" Height="30" Width="150" Margin="375,395,75,95"/>
+        <Label Content="Sбок. = 2πRh" Style="{DynamicResource LabelStyle}" FontSize="24" HorizontalContentAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="150" Margin="75,275,0,0" />
+        <Label Content="Sосн. = πR^2" Style="{DynamicResource LabelStyle}" FontSize="24" HorizontalContentAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="150" Margin="75,320,0,0" />
+        <Label Content="Sобщ. = Sбок. + 2Sосн." Style="{DynamicResource LabelStyle}" FontSize="24" HorizontalContentAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="150" Margin="75,365,0,0" />
+        <Label Content="V = πhR^2" Style="{DynamicResource LabelStyle}" FontSize="24" HorizontalContentAlignment="Left"  VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="150" Margin="75,410,0,0" />
+
+        <TextBox Name="cylinder_radius" Style="{DynamicResource TextBoxStyle}" Height="30" Width="150" Margin="375,25,75,465" ToolTip ="Введите радиус основания"/>
+        <TextBox Name="cylinder_height" Style="{DynamicResource TextBoxStyle}" Height="30" Width="150" Margin="375,75,75,415" ToolTip ="Введите высоту"/>
+
+        <TextBox Name="cylinder_square_foundation" Style="{DynamicResource TextBoxStyle}" IsReadOnly ="True" Height="30" Width="150" Margin="375,245,75,245"/>
+        <TextBox Name="cylinder_square_side" Style="{DynamicResource TextBoxStyle}" IsReadOnly ="True" Height="30" Width="150" Margin="375,295,75,195"/>
+        <TextBox Name="cylinder_square_total" Style="{DynamicResource TextBoxStyle}" IsReadOnly ="True" Height="30" Width="150" Margin="375,345,75,145"/>
+        <TextBox Name="cylinder_volume" Style="{DynamicResource TextBoxStyle}" IsReadOnly ="True" Height="30" Width="150" Margin="375,395,75,95"/>
     </Grid>
 </Page>

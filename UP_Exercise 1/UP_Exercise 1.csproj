@@ -70,6 +70,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Themes\DarkTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\LightTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -146,28 +154,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PageCone\cone_img.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="PageCone\cone_formulas.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="PageCylinder\cylinder_formulas.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PageCylinder\cylinder_img.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="PageSphere\sphere_formulas.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PageSphere\sphere_img.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="PageTruncatedCone\truncatedcone_formulas.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="PageTruncatedCone\truncatedcone_img.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
@@ -180,6 +176,18 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PageCone\cone_img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PageCylinder\cylinder_img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PageSphere\sphere_img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PageTruncatedCone\truncatedcone_img.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

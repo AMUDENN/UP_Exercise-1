@@ -22,20 +22,20 @@ namespace UP_Exercise_1
             InitializeComponent();
             MainWindow.Change_Title("Конус");
         }
+
         private void Cone_calc_Click(object sender, RoutedEventArgs e)
         {
-            Exception[] ex = new Exception[3];
+            Exception[] ex = new Exception[2];
             ex[0] = ExceptionFunctions.Ex_Double(cone_radius.Text, "\"R\"", 0);
             ex[1] = ExceptionFunctions.Ex_Double(cone_height.Text, "\"H\"", 0);
-            ex[2] = ExceptionFunctions.Ex_Int(cone_accuracy.Text, "\"Точность\"", 0, 15);
 
 
-            if (ex[0] == null && ex[1] == null && ex[2] == null)
+            if (ex[0] == null && ex[1] == null)
             {
 
                 double radius = Convert.ToDouble(cone_radius.Text);
                 double height = Convert.ToDouble(cone_height.Text);
-                int accuracy = Convert.ToInt32(cone_accuracy.Text);
+                int accuracy = Menu.accuracy;
                 try
                 {
                     double square_foundation = Math.Round(Math.PI * Math.Pow(radius, 2), accuracy);
