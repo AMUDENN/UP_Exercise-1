@@ -154,18 +154,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PageCone\cone_formulas.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="PageCylinder\cylinder_formulas.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="PageSphere\sphere_formulas.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="PageTruncatedCone\truncatedcone_formulas.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
