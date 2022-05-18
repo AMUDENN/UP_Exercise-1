@@ -28,7 +28,7 @@
 
         <Label Content="Sосн. = πR^2" Style="{DynamicResource LabelStyle}" FontSize="24" HorizontalContentAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="150" Margin="50,340,0,0" />
         <Label Content="Sбок. = πL(R+r)" Style="{DynamicResource LabelStyle}" FontSize="24" HorizontalContentAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="200" Margin="50,385,0,0" />
-        <Label Content="V = 1/3h(S1+S2+√(S1*S2)" Style="{DynamicResource LabelStyle}" FontSize="24" HorizontalContentAlignment="Left"  VerticalAlignment="Top" HorizontalAlignment="Left" Height="55" Width="286" Margin="25,430,0,0" />
+        <Label Content="V = 1/3h(S1+S2+√(S1*S2))" Style="{DynamicResource LabelStyle}" FontSize="24" HorizontalContentAlignment="Left"  VerticalAlignment="Top" HorizontalAlignment="Left" Height="55" Width="286" Margin="25,430,0,0" />
 
         <TextBox Name="truncatedcone_radius_top" Style="{DynamicResource TextBoxStyle}" Height="30" Width="150" Margin="375,25,75,565" ToolTip ="Введите радиус верхнего основания"/>
         <TextBox Name="truncatedcone_radius_bottom" Style="{DynamicResource TextBoxStyle}" Height="30" Width="150" Margin="375,75,75,515" ToolTip ="Введите радиус нижнего основания"/>
