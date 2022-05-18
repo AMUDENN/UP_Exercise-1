@@ -65,13 +65,13 @@ namespace UP_Exercise_1
                 try
                 {
                     double l = Math.Sqrt(Math.Pow(radius_top - radius_bottom, 2) + Math.Pow(height, 2));
-                    double square_first = Math.Round(Math.PI * Math.Pow(radius_top, 2), accuracy);
-                    double square_second = Math.Round(Math.PI * Math.Pow(radius_bottom, 2), accuracy);
-                    double square_side = Math.Round(Math.PI * l * (radius_top + radius_bottom), accuracy);
-                    truncatedcone_square_top.Text = Convert.ToString(square_first);
-                    truncatedcone_square_bottom.Text = Convert.ToString(square_second);
-                    truncatedcone_square_side.Text = Convert.ToString(square_side);
-                    truncatedcone_square_total.Text = Convert.ToString(square_first + square_second + square_side);
+                    double square_first = Math.PI * Math.Pow(radius_top, 2);
+                    double square_second = Math.PI * Math.Pow(radius_bottom, 2);
+                    double square_side = Math.PI * l * (radius_top + radius_bottom);
+                    truncatedcone_square_top.Text = Convert.ToString(Math.Round(square_first, accuracy));
+                    truncatedcone_square_bottom.Text = Convert.ToString(Math.Round(square_second, accuracy));
+                    truncatedcone_square_side.Text = Convert.ToString(Math.Round(square_side, accuracy));
+                    truncatedcone_square_total.Text = Convert.ToString(Math.Round(square_first + square_second + square_side, accuracy));
                     truncatedcone_volume.Text = Convert.ToString(Math.Round(height * (square_first + square_second + Math.Sqrt(square_first * square_second)) / 3, accuracy));
                 }
                 catch { }
