@@ -20,7 +20,34 @@ namespace UP_Exercise_1
         public TruncatedCone()
         {
             InitializeComponent();
+            accuracy_slyder.Value = Menu.accuracy;
             MainWindow.Change_Title("Усечённый конус");
+            Accuracy_Print();
+        }
+        private void Change_Light_Theme(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Change_Theme("Light");
+        }
+        private void Change_Dark_Theme(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Change_Theme("Dark");
+        }
+        private void Accuracy_Print()
+        {
+            print_accuracy.Content = $"Точность: {Menu.accuracy}";
+        }
+        private void Accuracy_Slyder_Change(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            Menu.accuracy = (int)e.NewValue;
+            Accuracy_Print();
+            Exception[] ex = new Exception[3];
+            ex[0] = ExceptionFunctions.Ex_Double(truncatedcone_radius_top.Text, "\"r\"", 0);
+            ex[1] = ExceptionFunctions.Ex_Double(truncatedcone_radius_bottom.Text, "\"R\"", 0);
+            ex[2] = ExceptionFunctions.Ex_Double(truncatedcone_height.Text, "\"H\"", 0);
+            if (ex[0] == null && ex[1] == null && ex[2] == null)
+            {
+                Truncatedcone_calc_Click(sender, e);
+            }
         }
         private void Truncatedcone_calc_Click(object sender, RoutedEventArgs e)
         {
@@ -29,10 +56,8 @@ namespace UP_Exercise_1
             ex[1] = ExceptionFunctions.Ex_Double(truncatedcone_radius_bottom.Text, "\"R\"", 0);
             ex[2] = ExceptionFunctions.Ex_Double(truncatedcone_height.Text, "\"H\"", 0);
 
-
             if (ex[0] == null && ex[1] == null && ex[2] == null)
             {
-
                 double radius_top = Convert.ToDouble(truncatedcone_radius_top.Text);
                 double radius_bottom = Convert.ToDouble(truncatedcone_radius_bottom.Text);
                 double height = Convert.ToDouble(truncatedcone_height.Text);
@@ -62,11 +87,6 @@ namespace UP_Exercise_1
                     }
                 }
                 MessageBox.Show(OutMessage, "Ошибки", MessageBoxButton.OK, MessageBoxImage.Error);
-                truncatedcone_square_top.Text = "Введите корректные значения";
-                truncatedcone_square_bottom.Text = "Введите корректные значения";
-                truncatedcone_square_side.Text = "Введите корректные значения";
-                truncatedcone_square_total.Text = "Введите корректные значения";
-                truncatedcone_volume.Text = "Введите корректные значения";
             }
         }
         private void Truncatedcone_Back(object sender, RoutedEventArgs e)

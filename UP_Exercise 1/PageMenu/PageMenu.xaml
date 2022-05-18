@@ -17,10 +17,10 @@
                 <MenuItem Header="Тёмная" Style="{DynamicResource MenuItemStyle}" Foreground="Black" Click="Change_Dark_Theme"></MenuItem>
             </MenuItem>
             <Separator/>
-            <MenuItem x:Name="header_accuracy" Header="Точность" Style="{DynamicResource MenuItemStyle}" Click="Click_Accuracy" Height="20" Width="100">
-                <MenuItem x:Name="print_accuracy" Style="{DynamicResource MenuItemStyle}" Foreground="Black"></MenuItem>
-                <MenuItem Header="Больше" Style="{DynamicResource MenuItemStyle}" Foreground="Black" Click="Accuracy_Increment"></MenuItem>
-                <MenuItem Header="Меньше" Style="{DynamicResource MenuItemStyle}" Foreground="Black" Click="Accuracy_Decrement"></MenuItem>
+            <MenuItem Header="Точность" Style="{DynamicResource MenuItemStyle}" Height="20" Width="100">
+                <Label x:Name="print_accuracy" Content="" Background="Transparent" Foreground="Black" FontSize="14" HorizontalContentAlignment="Left" Height="25" Width="100" />
+                <Slider x:Name="accuracy_slyder" Minimum="0" Maximum="15" SelectionStart="0" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True"
+                        IsSelectionRangeEnabled="True" ValueChanged="Accuracy_Slyder_Change" Height="20" Width="100" />
             </MenuItem>
         </Menu>
         <Button x:Name="sphere" Content="Сфера" Style="{DynamicResource ButtonStyle}" Click="Sphere_Click" Width="200" Height="45" Margin="150,60,150,365" />

@@ -11,6 +11,19 @@
       WindowHeight="620" WindowWidth="600">
 
     <Grid>
+        <Menu Height="20" Style="{DynamicResource MenuStyle}" Background="White" >
+            <MenuItem Header="Выберите тему" Style="{DynamicResource MenuItemStyle}" Height="20" Width="100">
+                <MenuItem Header="Светлая" Style="{DynamicResource MenuItemStyle}" Foreground="Black" Click="Change_Light_Theme"></MenuItem>
+                <MenuItem Header="Тёмная" Style="{DynamicResource MenuItemStyle}" Foreground="Black" Click="Change_Dark_Theme"></MenuItem>
+            </MenuItem>
+            <Separator/>
+            <MenuItem Header="Точность" Style="{DynamicResource MenuItemStyle}" Height="20" Width="100">
+                <Label x:Name="print_accuracy" Content="" Background="Transparent" Foreground="Black" FontSize="14" HorizontalContentAlignment="Left" Height="25" Width="100" />
+                <Slider x:Name="accuracy_slyder" Minimum="0" Maximum="15" SelectionStart="0" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True"
+                        IsSelectionRangeEnabled="True" ValueChanged="Accuracy_Slyder_Change" Height="20" Width="100" />
+            </MenuItem>
+        </Menu>
+
         <Image Source="truncatedcone_img.png" Margin="50,75,320,265" />
 
         <Button x:Name="truncatedcone_calc" Style="{DynamicResource ButtonStyle}" Content="Вычислить" Click="Truncatedcone_calc_Click" Width="200" Height="45" Margin="325,200,75,375" RenderTransformOrigin="0.505,0.333" />
@@ -26,9 +39,9 @@
         <Label Content="S общ. = " Style="{DynamicResource LabelStyle}" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="75" Margin="300,450,0,0" />
         <Label Content="V = " Style="{DynamicResource LabelStyle}" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="75" Margin="300,500,0,0" />
 
-        <Label Content="Sосн. = πR^2" Style="{DynamicResource LabelStyle}" FontSize="24" HorizontalContentAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="150" Margin="50,340,0,0" />
+        <Label Content="Sосн. = πR²" Style="{DynamicResource LabelStyle}" FontSize="24" HorizontalContentAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="150" Margin="50,340,0,0" />
         <Label Content="Sбок. = πL(R+r)" Style="{DynamicResource LabelStyle}" FontSize="24" HorizontalContentAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="200" Margin="50,385,0,0" />
-        <Label Content="V = 1/3h(S1+S2+√(S1*S2)" Style="{DynamicResource LabelStyle}" FontSize="24" HorizontalContentAlignment="Left"  VerticalAlignment="Top" HorizontalAlignment="Left" Height="55" Width="286" Margin="25,430,0,0" />
+        <Label Content="V = 1/3h(S1+S2+√(S1*S2))" Style="{DynamicResource LabelStyle}" FontSize="24" HorizontalContentAlignment="Left"  VerticalAlignment="Top" HorizontalAlignment="Left" Height="55" Width="286" Margin="25,430,0,0" />
 
         <TextBox Name="truncatedcone_radius_top" Style="{DynamicResource TextBoxStyle}" Height="30" Width="150" Margin="375,25,75,565" ToolTip ="Введите радиус верхнего основания"/>
         <TextBox Name="truncatedcone_radius_bottom" Style="{DynamicResource TextBoxStyle}" Height="30" Width="150" Margin="375,75,75,515" ToolTip ="Введите радиус нижнего основания"/>

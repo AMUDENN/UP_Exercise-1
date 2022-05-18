@@ -189,5 +189,8 @@
   <ItemGroup>
     <Resource Include="PageTruncatedCone\truncatedcone_img.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MainWindow\icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

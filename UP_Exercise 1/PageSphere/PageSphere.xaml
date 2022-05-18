@@ -11,6 +11,19 @@
       WindowHeight="470" WindowWidth="600">
 
     <Grid>
+        <Menu Height="20" Style="{DynamicResource MenuStyle}" Background="White" >
+            <MenuItem Header="Выберите тему" Style="{DynamicResource MenuItemStyle}" Height="20" Width="100">
+                <MenuItem Header="Светлая" Style="{DynamicResource MenuItemStyle}" Foreground="Black" Click="Change_Light_Theme"></MenuItem>
+                <MenuItem Header="Тёмная" Style="{DynamicResource MenuItemStyle}" Foreground="Black" Click="Change_Dark_Theme"></MenuItem>
+            </MenuItem>
+            <Separator/>
+            <MenuItem Header="Точность" Style="{DynamicResource MenuItemStyle}" Height="20" Width="100">
+                <Label x:Name="print_accuracy" Content="" Background="Transparent" Foreground="Black" FontSize="14" HorizontalContentAlignment="Left" Height="25" Width="100" />
+                <Slider x:Name="accuracy_slyder" Minimum="0" Maximum="15" SelectionStart="0" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True"
+                        IsSelectionRangeEnabled="True" ValueChanged="Accuracy_Slyder_Change" Height="20" Width="100" />
+            </MenuItem>
+        </Menu>
+        
         <Image Source="sphere_img.png" Margin="50,50,330,200" />
 
         <Button x:Name="sphere_calc" Style="{DynamicResource ButtonStyle}" Content="Вычислить" Click="Sphere_calc_Click" Width="200" Height="45" Margin="325,125,75,300" />
@@ -21,8 +34,8 @@
         <Label Content="V = " Style="{DynamicResource LabelStyle}" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="60" Margin="315,245,0,0" />
         <Label Content="S = " Style="{DynamicResource LabelStyle}" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="60" Margin="315,295,0,0" />
 
-        <Label Content="S = 4πR^2" Style="{DynamicResource LabelStyle}" FontSize="24" HorizontalContentAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="150" Margin="85,295,0,0" />
-        <Label Content="V = 4/3πR^3" Style="{DynamicResource LabelStyle}" FontSize="24" HorizontalContentAlignment="Left"  VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="150" Margin="85,350,0,0" />
+        <Label Content="S = 4πR²" Style="{DynamicResource LabelStyle}" FontSize="24" HorizontalContentAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="150" Margin="85,295,0,0" />
+        <Label Content="V = 4/3πR³" Style="{DynamicResource LabelStyle}" FontSize="24" HorizontalContentAlignment="Left"  VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="150" Margin="85,350,0,0" />
         
         <TextBox Name="sphere_radius" Style="{DynamicResource TextBoxStyle}" Height="30" Width="150" Margin="375,50,75,390" ToolTip ="Введите радиус"/>
 

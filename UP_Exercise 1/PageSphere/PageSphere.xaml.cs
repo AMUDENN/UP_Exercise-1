@@ -20,18 +20,40 @@ namespace UP_Exercise_1
         public Sphere()
         {
             InitializeComponent();
+            accuracy_slyder.Value = Menu.accuracy;
             MainWindow.Change_Title("Сфера");
+            Accuracy_Print();
         }
-
+        private void Change_Light_Theme(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Change_Theme("Light");
+        }
+        private void Change_Dark_Theme(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Change_Theme("Dark");
+        }
+        private void Accuracy_Print()
+        {
+            print_accuracy.Content = $"Точность: {Menu.accuracy}";
+        }
+        private void Accuracy_Slyder_Change(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            Menu.accuracy = (int)e.NewValue;
+            Accuracy_Print();
+            Exception[] ex = new Exception[1];
+            ex[0] = ExceptionFunctions.Ex_Double(sphere_radius.Text, "\"R\"", 0);
+            if (ex[0] == null)
+            {
+                Sphere_calc_Click(sender, e);
+            }
+        }
         private void Sphere_calc_Click(object sender, RoutedEventArgs e)
         {
             Exception[] ex = new Exception[1];
             ex[0] = ExceptionFunctions.Ex_Double(sphere_radius.Text,"\"R\"", 0);
 
-
             if (ex[0] == null)
             {
-
                 double radius = Convert.ToDouble(sphere_radius.Text);
                 int accuracy = Menu.accuracy;
                 try
@@ -52,10 +74,7 @@ namespace UP_Exercise_1
                     }
                 }
                 MessageBox.Show(OutMessage, "Ошибки", MessageBoxButton.OK, MessageBoxImage.Error);
-                sphere_volume.Text = "Введите корректные значения";
-                sphere_square.Text = "Введите корректные значения";
             }
-
         }
         private void Sphere_Back(object sender, RoutedEventArgs e)
         {

@@ -11,6 +11,19 @@
       WindowHeight="520" WindowWidth="600">
 
     <Grid>
+        <Menu Height="20" Style="{DynamicResource MenuStyle}" Background="White" >
+            <MenuItem Header="Выберите тему" Style="{DynamicResource MenuItemStyle}" Height="20" Width="100">
+                <MenuItem Header="Светлая" Style="{DynamicResource MenuItemStyle}" Foreground="Black" Click="Change_Light_Theme"></MenuItem>
+                <MenuItem Header="Тёмная" Style="{DynamicResource MenuItemStyle}" Foreground="Black" Click="Change_Dark_Theme"></MenuItem>
+            </MenuItem>
+            <Separator/>
+            <MenuItem Header="Точность" Style="{DynamicResource MenuItemStyle}" Height="20" Width="100">
+                <Label x:Name="print_accuracy" Content="" Background="Transparent" Foreground="Black" FontSize="14" HorizontalContentAlignment="Left" Height="25" Width="100" />
+                <Slider x:Name="accuracy_slyder" Minimum="0" Maximum="15" SelectionStart="0" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True"
+                        IsSelectionRangeEnabled="True" ValueChanged="Accuracy_Slyder_Change" Height="20" Width="100" />
+            </MenuItem>
+        </Menu>
+        
         <Image Source="cone_img.png" Margin="50,50,330,200" />
 
         <Button x:Name="cone_calc" Style="{DynamicResource ButtonStyle}" Content="Вычислить" Click="Cone_calc_Click" Width="200" Height="45" Margin="325,150,75,325" />
@@ -24,8 +37,8 @@
         <Label Content="S общ. = " Style="{DynamicResource LabelStyle}" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="75" Margin="300,345,0,0" />
         <Label Content="V = " Style="{DynamicResource LabelStyle}" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="75" Margin="300,395,0,0" />
 
-        <Label Content="S = πR√(R^2+h^2)+πR^2" Style="{DynamicResource LabelStyle}" FontSize="24" HorizontalContentAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="260" Margin="30,295,0,0" />
-        <Label Content="V = 1/3πhR^2" Style="{DynamicResource LabelStyle}" FontSize="24" HorizontalContentAlignment="Left"  VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="150" Margin="85,360,0,0" />
+        <Label Content="S = πR√(R²+h²)+πR²" Style="{DynamicResource LabelStyle}" FontSize="24" HorizontalContentAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="260" Margin="30,295,0,0" />
+        <Label Content="V = 1/3πR²h" Style="{DynamicResource LabelStyle}" FontSize="24" HorizontalContentAlignment="Left"  VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="150" Margin="85,360,0,0" />
 
         <TextBox Name="cone_radius" Style="{DynamicResource TextBoxStyle}" Height="30" Width="150" Margin="375,25,75,465" ToolTip ="Введите радиус основания"/>
         <TextBox Name="cone_height" Style="{DynamicResource TextBoxStyle}" Height="30" Width="150" Margin="375,75,75,415" ToolTip ="Введите высоту"/>

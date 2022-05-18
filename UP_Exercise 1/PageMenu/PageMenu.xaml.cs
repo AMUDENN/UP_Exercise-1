@@ -21,7 +21,8 @@ namespace UP_Exercise_1
         public Menu()
         {
             InitializeComponent();
-            MainWindow.Change_Title("Меню");
+            accuracy_slyder.Value = accuracy;
+            MainWindow.Change_Title("Меню 2ПКС-220 Демьянов Артём");
             Accuracy_Print();
         }
         private void Change_Light_Theme(object sender, RoutedEventArgs e)
@@ -32,29 +33,16 @@ namespace UP_Exercise_1
         {
             MainWindow.Change_Theme("Dark");
         }
-        private void Click_Accuracy(object sender, RoutedEventArgs e)
-        {
-            header_accuracy.IsSubmenuOpen = true;
-        }
-        private void Accuracy_Increment(object sender, RoutedEventArgs e)
-        {
-            if (accuracy < 15)
-            {
-                accuracy++;
-            }
-            Accuracy_Print();
-        }
-        private void Accuracy_Decrement(object sender, RoutedEventArgs e)
-        {
-            if (accuracy > 0)
-            {
-                accuracy--;
-            }
-            Accuracy_Print();
-        }
+
         private void Accuracy_Print()
         {
-            print_accuracy.Header = $"Точность: {accuracy}"; 
+            print_accuracy.Content = $"Точность: {accuracy}"; 
+        }
+
+        private void Accuracy_Slyder_Change(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            accuracy = (int)e.NewValue;
+            Accuracy_Print();
         }
         private void Sphere_Click(object sender, RoutedEventArgs e)
         {

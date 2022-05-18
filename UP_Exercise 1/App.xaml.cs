@@ -8,9 +8,6 @@ using System.Windows;
 
 namespace UP_Exercise_1
 {
-    /// <summary>
-    /// Логика взаимодействия для App.xaml
-    /// </summary>
     public partial class App : Application
     {
     }

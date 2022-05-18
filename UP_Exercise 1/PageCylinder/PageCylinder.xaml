@@ -11,6 +11,19 @@
       WindowHeight="520" WindowWidth="600">
 
     <Grid>
+        <Menu Height="20" Style="{DynamicResource MenuStyle}" Background="White" >
+            <MenuItem Header="Выберите тему" Style="{DynamicResource MenuItemStyle}" Height="20" Width="100">
+                <MenuItem Header="Светлая" Style="{DynamicResource MenuItemStyle}" Foreground="Black" Click="Change_Light_Theme"></MenuItem>
+                <MenuItem Header="Тёмная" Style="{DynamicResource MenuItemStyle}" Foreground="Black" Click="Change_Dark_Theme"></MenuItem>
+            </MenuItem>
+            <Separator/>
+            <MenuItem Header="Точность" Style="{DynamicResource MenuItemStyle}" Height="20" Width="100">
+                <Label x:Name="print_accuracy" Content="" Background="Transparent" Foreground="Black" FontSize="14" HorizontalContentAlignment="Left" Height="25" Width="100" />
+                <Slider x:Name="accuracy_slyder" Minimum="0" Maximum="15" SelectionStart="0" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True"
+                        IsSelectionRangeEnabled="True" ValueChanged="Accuracy_Slyder_Change" Height="20" Width="100" />
+            </MenuItem>
+        </Menu>
+        
         <Image Source="cylinder_img.png" Margin="50,50,350,220" />
 
         <Button x:Name="cylinder_calc" Style="{DynamicResource ButtonStyle}" Content="Вычислить" Click="Cylinder_calc_Click" Width="200" Height="45" Margin="325,150,75,325" />
@@ -25,9 +38,9 @@
         <Label Content="V = " Style="{DynamicResource LabelStyle}" VerticalAlignment="Top" HorizontalAlignment="Left" Height="30" Width="75" Margin="300,395,0,0" />
 
         <Label Content="Sбок. = 2πRh" Style="{DynamicResource LabelStyle}" FontSize="24" HorizontalContentAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="150" Margin="75,275,0,0" />
-        <Label Content="Sосн. = πR^2" Style="{DynamicResource LabelStyle}" FontSize="24" HorizontalContentAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="150" Margin="75,320,0,0" />
+        <Label Content="Sосн. = πR²" Style="{DynamicResource LabelStyle}" FontSize="24" HorizontalContentAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="150" Margin="75,320,0,0" />
         <Label Content="Sобщ. = Sбок. + 2Sосн." Style="{DynamicResource LabelStyle}" FontSize="24" HorizontalContentAlignment="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="150" Margin="75,365,0,0" />
-        <Label Content="V = πhR^2" Style="{DynamicResource LabelStyle}" FontSize="24" HorizontalContentAlignment="Left"  VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="150" Margin="75,410,0,0" />
+        <Label Content="V = πR²h" Style="{DynamicResource LabelStyle}" FontSize="24" HorizontalContentAlignment="Left"  VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="150" Margin="75,410,0,0" />
 
         <TextBox Name="cylinder_radius" Style="{DynamicResource TextBoxStyle}" Height="30" Width="150" Margin="375,25,75,465" ToolTip ="Введите радиус основания"/>
         <TextBox Name="cylinder_height" Style="{DynamicResource TextBoxStyle}" Height="30" Width="150" Margin="375,75,75,415" ToolTip ="Введите высоту"/>

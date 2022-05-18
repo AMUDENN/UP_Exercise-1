@@ -20,19 +20,42 @@ namespace UP_Exercise_1
         public Cone()
         {
             InitializeComponent();
+            accuracy_slyder.Value = Menu.accuracy;
             MainWindow.Change_Title("Конус");
+            Accuracy_Print();
         }
-
+        private void Change_Light_Theme(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Change_Theme("Light");
+        }
+        private void Change_Dark_Theme(object sender, RoutedEventArgs e)
+        {
+            MainWindow.Change_Theme("Dark");
+        }
+        private void Accuracy_Print()
+        {
+            print_accuracy.Content = $"Точность: {Menu.accuracy}";
+        }
+        private void Accuracy_Slyder_Change(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            Menu.accuracy = (int)e.NewValue;
+            Accuracy_Print();
+            Exception[] ex = new Exception[2];
+            ex[0] = ExceptionFunctions.Ex_Double(cone_radius.Text, "\"R\"", 0);
+            ex[1] = ExceptionFunctions.Ex_Double(cone_height.Text, "\"H\"", 0);
+            if (ex[0] == null && ex[1] == null)
+            {
+                Cone_calc_Click(sender, e);
+            }
+        }
         private void Cone_calc_Click(object sender, RoutedEventArgs e)
         {
             Exception[] ex = new Exception[2];
             ex[0] = ExceptionFunctions.Ex_Double(cone_radius.Text, "\"R\"", 0);
             ex[1] = ExceptionFunctions.Ex_Double(cone_height.Text, "\"H\"", 0);
 
-
             if (ex[0] == null && ex[1] == null)
             {
-
                 double radius = Convert.ToDouble(cone_radius.Text);
                 double height = Convert.ToDouble(cone_height.Text);
                 int accuracy = Menu.accuracy;
@@ -58,10 +81,6 @@ namespace UP_Exercise_1
                     }
                 }
                 MessageBox.Show(OutMessage, "Ошибки", MessageBoxButton.OK, MessageBoxImage.Error);
-                cone_square_foundation.Text = "Введите корректные значения";
-                cone_square_side.Text = "Введите корректные значения";
-                cone_square_total.Text = "Введите корректные значения";
-                cone_volume.Text = "Введите корректные значения";
             }
         }
         private void Cone_Back(object sender, RoutedEventArgs e)
